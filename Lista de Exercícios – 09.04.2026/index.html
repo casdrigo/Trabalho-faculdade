@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Geek - 8 Requisitos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button id="btn-tema" onclick="alternarTema()">Alternar para Tema Claro</button>
+
+    <section id="ex1">
+        <h2>1. Perfil de Personagem</h2>
+        <div class="perfil-container">
+            <img src="imagens/IllidanFace.png" alt="Illidan" class="perfil-img">
+            <div>
+                <h3>Illidan Tempesfúria</h3>
+                <p><strong>Descrição:</strong> O primeiro Caçador de Demônios, conhecido como o Traidor. Ele consumiu as energias da Caveira de Gul'dan para obter poder.</p>
+                <p class="skills">Habilidades: Metamorfose, Queimar Mana, Evasão</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="ex2">
+        <h2>2. Card de Personagem</h2>
+        <div class="card">
+            <h3>Illidan</h3>
+            <p><strong>Classe:</strong> Caçador de Demônios</p>
+            <div style="text-align: left; margin-bottom: 10px;">
+                <label>Vida (80%)</label>
+                <div class="status-bar"><div class="hp-fill"></div></div>
+            </div>
+            <div style="text-align: left;">
+                <label>Fúria (50%)</label>
+                <div class="status-bar"><div class="mana-fill"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ex3">
+        <h2>3. Saga Harry Potter</h2>
+        <ul class="filmes-list">
+            <li>A Pedra Filosofal</li>
+            <li class="favorito">A Câmara Secreta (Filme Favorito ★)</li>
+            <li>O Prisioneiro de Azkaban </li>
+            <li>O Cálice de Fogo</li>
+            <li>A Ordem da Fênix</li>
+            <li>O Enigma do Principe</li>
+            <li>As Reliquias da morte</li>
+
+        </ul>
+    </section>
+
+    <section id="ex4">
+        <h2>4. Botão Interativo</h2>
+        <button id="btn-magia" onclick="lancarMagia()">Lançar Feitiço: Lumos</button>
+    </section>
+
+    <section id="ex5">
+        <h2>5. Sistema de XP</h2>
+        <p>Experiência Atual: <strong id="xp-display">0</strong> XP</p>
+        <button onclick="alterarXP(10)">+10 XP (Missão Concluída)</button>
+        <button style="background-color: #e74c3c;" onclick="alterarXP(-5)">-5 XP (Dano Recebido)</button>
+    </section>
+
+    <section id="ex6">
+        <h2>6. Quiz Geek</h2>
+        <div class="quiz-question">
+            <p>1. Qual é a corporação vilã em Resident Evil?</p>
+            <input type="radio" name="q1" value="errado"> Tricell<br>
+            <input type="radio" name="q1" value="certo"> Umbrella Corporation<br>
+        </div>
+        <div class="quiz-question">
+            <p>2. Em World of Warcraft, quem é o Rei Lich?</p>
+            <input type="radio" name="q2" value="certo"> Arthas Menethil<br>
+            <input type="radio" name="q2" value="errado"> Thrall<br>
+        </div>
+        <div class="quiz-question">
+            <p>3. Qual é a casa de Harry Potter?</p>
+            <input type="radio" name="q3" value="errado"> Sonserina<br>
+            <input type="radio" name="q3" value="certo"> Grifinória<br>
+        </div>
+        <button onclick="calcularQuiz()">Enviar Respostas</button>
+        <p id="resultado-quiz" style="font-weight: bold; margin-top: 10px;"></p>
+    </section>
+
+    <section id="ex8">
+        <h2>8. Galeria de Personagens</h2>
+        <div class="galeria-grid">
+            <div class="galeria-item" onclick="mostrarDetalhes('Leon S. Kennedy', 'Sobrevivente de Raccoon City e agente do governo.')">
+                <img id="img-leon" src="imagens/Leon.S.Kennedy.png" alt="Leon">
+                <p>Leon (RE)</p>
+            </div>
+            <div class="galeria-item" onclick="mostrarDetalhes('Arthas', 'O Príncipe de Lordaeron que se tornou o Rei Lich.')">
+                <img id="Arthas-img" src="imagens/ArthasLichKing.png" alt="Arthas">
+                <p>Arthas (WoW)</p>
+            </div>
+            <div class="galeria-item" onclick="mostrarDetalhes('Harry Potter', 'O Menino que Sobreviveu.')">
+                <img id="Harry-img" src="imagens/HarryPotter.png" alt="Harry">
+                <p>Harry (HP)</p>
+            </div>
+        </div>
+        <div id="detalhes-galeria"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
